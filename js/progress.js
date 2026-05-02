@@ -122,26 +122,6 @@ function renderScoreChart(history) {
     }
   });
 
-  // Draw pass-mark reference line
-  const passLine = {
-    id: 'passLine',
-    beforeDraw(chart) {
-      const { ctx, chartArea: { left, right }, scales: { y } } = chart;
-      if (!chartArea) return;
-      const yPos = y.getPixelForValue(70);
-      ctx.save();
-      ctx.beginPath();
-      ctx.moveTo(left, yPos);
-      ctx.lineTo(right, yPos);
-      ctx.strokeStyle = 'rgba(231,76,60,0.5)';
-      ctx.lineWidth   = 1.5;
-      ctx.setLineDash([6, 4]);
-      ctx.stroke();
-      ctx.restore();
-    }
-  };
-  // Plugin inline is fine for simple reference lines, but adding above via annotation is preferred
-  // For simplicity we skip the plugin since annotation plugin is not loaded
 }
 
 // ─── Topic performance chart ──────────────────────────────────
