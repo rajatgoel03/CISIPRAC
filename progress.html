@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Progress — CISI IOC Practice</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📊</text></svg>">
+</head>
+<body>
+
+<!-- ── Navigation ─────────────────────────────────────── -->
+<nav class="navbar" role="navigation" aria-label="Main navigation">
+  <div class="navbar__inner">
+    <a href="index.html" class="navbar__brand" aria-label="CISI IOC Home">
+      <div class="navbar__brand-icon" aria-hidden="true">IOC</div>
+      <span class="navbar__brand-text">CISI <span>IOC</span> Practice</span>
+    </a>
+    <ul class="navbar__nav" role="list">
+      <li><a href="index.html"      class="navbar__link">Home</a></li>
+      <li><a href="quiz.html?mode=quick" class="navbar__link">Practice</a></li>
+      <li><a href="flashcards.html" class="navbar__link">Flashcards</a></li>
+      <li><a href="progress.html"   class="navbar__link active" aria-current="page">Progress</a></li>
+    </ul>
+    <button class="navbar__hamburger" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- ── Page Header ────────────────────────────────────── -->
+<header style="background:var(--navy);padding:2.5rem 1.5rem 2rem;text-align:center">
+  <div class="container">
+    <h1 style="color:var(--white);font-size:1.8rem;margin-bottom:0.4rem">📊 Your Progress</h1>
+    <p style="color:rgba(255,255,255,0.7)">Track your performance across all quizzes</p>
+  </div>
+</header>
+
+<!-- ── Main ───────────────────────────────────────────── -->
+<main>
+  <section class="section">
+    <div class="container container--medium">
+
+      <!-- Stats Grid -->
+      <div class="stats-grid mb-3">
+        <div class="stat-card">
+          <div class="stat-card__value" id="statQuizzes">—</div>
+          <div class="stat-card__label">Quizzes Taken</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-card__value" id="statAvg">—</div>
+          <div class="stat-card__label">Average Score</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-card__value" id="statBest">—</div>
+          <div class="stat-card__label">Best Score</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-card__value" id="statTotal">—</div>
+          <div class="stat-card__label">Questions Attempted</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-card__value" id="statPasses">—</div>
+          <div class="stat-card__label">Passes (≥70%)</div>
+        </div>
+      </div>
+
+      <!-- Score History Chart -->
+      <div class="chart-card mb-3">
+        <h3>Score History (last 10 quizzes)</h3>
+        <p id="scoreChartEmpty" style="display:none;color:var(--text-light);font-size:0.9rem">
+          No quiz history yet. <a href="quiz.html?mode=quick">Take a quiz</a> to see your score chart.
+        </p>
+        <canvas id="scoreChart" height="200" aria-label="Score history chart" role="img"></canvas>
+      </div>
+
+      <!-- Topic Performance Chart -->
+      <div class="chart-card mb-3">
+        <h3>Topic Performance</h3>
+        <p id="topicChartEmpty" style="display:none;color:var(--text-light);font-size:0.9rem">
+          No quiz history yet. <a href="quiz.html?mode=quick">Take a quiz</a> to see your topic breakdown.
+        </p>
+        <div style="position:relative;height:320px">
+          <canvas id="topicChart" aria-label="Topic performance chart" role="img"></canvas>
+        </div>
+      </div>
+
+      <!-- Weak Areas -->
+      <div class="card mb-3">
+        <h3 style="color:var(--navy);margin-bottom:1rem">⚠️ Areas Needing Attention</h3>
+        <div id="weakAreas" class="weak-areas">
+          <p style="color:var(--text-light);font-size:0.9rem">Complete at least a couple of quizzes to identify weak areas.</p>
+        </div>
+      </div>
+
+      <!-- Quiz History List -->
+      <div class="card mb-3">
+        <h3 style="color:var(--navy);margin-bottom:1rem">📋 Quiz History</h3>
+        <div id="historyList" class="history-list"></div>
+      </div>
+
+      <!-- Reset -->
+      <div style="text-align:center;padding:1rem 0">
+        <button id="resetBtn" class="btn btn--danger btn--sm" aria-label="Reset all progress data">
+          🗑️ Reset All Progress
+        </button>
+        <p style="font-size:0.78rem;color:var(--text-light);margin-top:0.5rem">This will permanently delete all quiz history and flashcard marks.</p>
+      </div>
+
+    </div>
+  </section>
+</main>
+
+<!-- ── Footer ─────────────────────────────────────────── -->
+<footer class="footer">
+  <p>CISI IOC Practice Platform &mdash; For revision purposes only.</p>
+</footer>
+
+<!-- Chart.js CDN -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"
+        crossorigin="anonymous"></script>
+<script src="js/progress.js"></script>
+</body>
+</html>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flashcards — CISI IOC Practice</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🃏</text></svg>">
+</head>
+<body>
+
+<!-- ── Navigation ─────────────────────────────────────── -->
+<nav class="navbar" role="navigation" aria-label="Main navigation">
+  <div class="navbar__inner">
+    <a href="index.html" class="navbar__brand" aria-label="CISI IOC Home">
+      <div class="navbar__brand-icon" aria-hidden="true">IOC</div>
+      <span class="navbar__brand-text">CISI <span>IOC</span> Practice</span>
+    </a>
+    <ul class="navbar__nav" role="list">
+      <li><a href="index.html"      class="navbar__link">Home</a></li>
+      <li><a href="quiz.html?mode=quick" class="navbar__link">Practice</a></li>
+      <li><a href="flashcards.html" class="navbar__link active" aria-current="page">Flashcards</a></li>
+      <li><a href="progress.html"   class="navbar__link">Progress</a></li>
+    </ul>
+    <button class="navbar__hamburger" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- ── Page Header ────────────────────────────────────── -->
+<header style="background:var(--navy);padding:2rem 1.5rem;text-align:center">
+  <div class="container">
+    <h1 style="color:var(--white);font-size:1.6rem;margin-bottom:0.4rem">🃏 Flashcards</h1>
+    <p style="color:rgba(255,255,255,0.7)">Click a card to flip it. Use arrow keys to navigate.</p>
+  </div>
+</header>
+
+<main>
+  <section class="section">
+    <div class="container container--narrow">
+
+      <!-- Filter + Shuffle -->
+      <div class="fc-topic-filter">
+        <label class="fc-filter-label" for="fcTopicFilter">Filter:</label>
+        <select id="fcTopicFilter" class="fc-select" aria-label="Filter flashcards by topic"></select>
+        <button id="fcShuffle" class="btn btn--ghost btn--sm" aria-label="Shuffle cards">🔀 Shuffle</button>
+      </div>
+
+      <!-- Stats row -->
+      <div style="display:flex;gap:1.5rem;justify-content:center;margin-bottom:1.75rem;flex-wrap:wrap">
+        <div style="text-align:center">
+          <div style="font-size:1.4rem;font-weight:800;color:var(--success)" id="fcKnownCount">0</div>
+          <div style="font-size:0.75rem;color:var(--text-light);text-transform:uppercase;letter-spacing:0.05em">Known</div>
+        </div>
+        <div style="text-align:center">
+          <div style="font-size:1.4rem;font-weight:800;color:var(--warning)" id="fcReviewCount">0</div>
+          <div style="font-size:0.75rem;color:var(--text-light);text-transform:uppercase;letter-spacing:0.05em">To Review</div>
+        </div>
+        <div style="text-align:center">
+          <div style="font-size:1.4rem;font-weight:800;color:var(--navy)" id="fcUnseenCount">0</div>
+          <div style="font-size:0.75rem;color:var(--text-light);text-transform:uppercase;letter-spacing:0.05em">Unseen</div>
+        </div>
+      </div>
+
+      <!-- Current status -->
+      <p style="text-align:center;font-size:0.85rem;color:var(--text-light);margin-bottom:0.5rem">
+        Status: <strong id="fcStatus">—</strong>
+      </p>
+
+      <!-- Flashcard -->
+      <div class="flashcard-scene">
+        <div class="flashcard" id="flashcard" role="button" tabindex="0"
+             aria-label="Flashcard — click or press Space to flip">
+
+          <!-- Front -->
+          <div class="flashcard__face flashcard__front">
+            <div class="flashcard__label" id="fcFrontLabel">Unit 1 · Regulation</div>
+            <p class="flashcard__text" id="fcFrontText">Loading…</p>
+            <p class="flashcard__hint">Click to reveal answer</p>
+          </div>
+
+          <!-- Back -->
+          <div class="flashcard__face flashcard__back">
+            <div class="flashcard__label" id="fcBackLabel">Answer &amp; Explanation</div>
+            <p class="flashcard__text" id="fcBackText"></p>
+            <p class="flashcard__hint">Click to flip back</p>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Progress -->
+      <p class="fc-progress" id="fcProgress">Card 1 of 75</p>
+
+      <!-- Navigation -->
+      <div class="fc-controls">
+        <button class="btn btn--ghost" id="fcPrev" aria-label="Previous card">← Prev</button>
+        <button class="btn btn--outline" id="flipBtn" aria-label="Flip card">🔄 Flip</button>
+        <button class="btn btn--ghost" id="fcNext" aria-label="Next card">Next →</button>
+      </div>
+
+      <!-- Mark buttons -->
+      <div class="fc-mark-btns">
+        <button class="btn btn--known" id="markKnown" aria-label="Mark as known">✅ Mark as Known  (K)</button>
+        <button class="btn btn--review" id="markReview" aria-label="Mark for review">🔁 Needs Review  (R)</button>
+      </div>
+
+      <!-- Keyboard hints -->
+      <p style="text-align:center;font-size:0.78rem;color:var(--grey-mid);margin-top:1.5rem">
+        Keyboard shortcuts: <kbd>←</kbd><kbd>→</kbd> navigate &nbsp;|&nbsp; <kbd>Space</kbd> flip &nbsp;|&nbsp; <kbd>K</kbd> known &nbsp;|&nbsp; <kbd>R</kbd> review
+      </p>
+
+    </div>
+  </section>
+</main>
+
+<!-- ── Footer ─────────────────────────────────────────── -->
+<footer class="footer">
+  <p>CISI IOC Practice Platform &mdash; For revision purposes only.</p>
+</footer>
+
+<style>
+kbd {
+  display: inline-block;
+  padding: 0.1rem 0.4rem;
+  background: var(--grey);
+  border: 1px solid var(--grey-mid);
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-family: monospace;
+  margin: 0 2px;
+}
+</style>
+
+<script src="js/questions.js"></script>
+<script src="js/flashcards.js"></script>
+</body>
+</html>

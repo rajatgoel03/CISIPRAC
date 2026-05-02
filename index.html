@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CISI IOC Practice Platform</title>
+  <meta name="description" content="Practice questions for the CISI Investment Operations Certificate (IOC) exam. Mock exams, quick practice, flashcards and progress tracking.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📊</text></svg>">
+</head>
+<body>
+
+<!-- ── Navigation ─────────────────────────────────────── -->
+<nav class="navbar" role="navigation" aria-label="Main navigation">
+  <div class="navbar__inner">
+    <a href="index.html" class="navbar__brand" aria-label="CISI IOC Home">
+      <div class="navbar__brand-icon" aria-hidden="true">IOC</div>
+      <span class="navbar__brand-text">CISI <span>IOC</span> Practice</span>
+    </a>
+    <ul class="navbar__nav" role="list">
+      <li><a href="index.html"     class="navbar__link active" aria-current="page">Home</a></li>
+      <li><a href="quiz.html?mode=quick" class="navbar__link">Practice</a></li>
+      <li><a href="flashcards.html" class="navbar__link">Flashcards</a></li>
+      <li><a href="progress.html"  class="navbar__link">Progress</a></li>
+    </ul>
+    <button class="navbar__hamburger" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- ── Hero ───────────────────────────────────────────── -->
+<header class="hero">
+  <div class="container hero__inner">
+    <div class="hero__badge">CISI Investment Operations Certificate</div>
+    <h1>Master the IOC Exam</h1>
+    <p>Practice with realistic questions across all four IOC units. Track your progress, identify weak areas, and build confidence for exam day.</p>
+    <div class="hero__cta">
+      <a href="quiz.html?mode=mock" class="btn btn--primary btn--lg">📝 Start Mock Exam</a>
+      <a href="quiz.html?mode=quick" class="btn btn--secondary btn--lg">⚡ Quick Practice</a>
+    </div>
+    <div class="hero__stats">
+      <div class="hero__stat">
+        <div class="hero__stat-value">75+</div>
+        <div class="hero__stat-label">Questions</div>
+      </div>
+      <div class="hero__stat">
+        <div class="hero__stat-value">4</div>
+        <div class="hero__stat-label">IOC Units</div>
+      </div>
+      <div class="hero__stat">
+        <div class="hero__stat-value">70%</div>
+        <div class="hero__stat-label">Pass Mark</div>
+      </div>
+      <div class="hero__stat">
+        <div class="hero__stat-value">1h 40m</div>
+        <div class="hero__stat-label">Mock Exam Time</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ── Practice Modes ─────────────────────────────────── -->
+<main>
+  <section class="section">
+    <div class="container">
+      <div class="section__header">
+        <h2>Choose Your Practice Mode</h2>
+        <p>Select how you want to study today</p>
+      </div>
+      <div class="modes-grid">
+        <a href="quiz.html?mode=mock" class="mode-card" aria-label="Start Mock Exam">
+          <div class="mode-card__icon">📝</div>
+          <div class="mode-card__tag">Timed</div>
+          <h3>Mock Exam</h3>
+          <p>Full exam simulation — up to 80 questions in 1 hour 40 minutes, randomised from all topics.</p>
+        </a>
+        <a href="quiz.html?mode=quick&count=20" class="mode-card" aria-label="Start Quick Practice">
+          <div class="mode-card__icon">⚡</div>
+          <div class="mode-card__tag">Untimed</div>
+          <h3>Quick Practice</h3>
+          <p>20 random questions. Perfect for a focused revision session when you're short on time.</p>
+        </a>
+        <a href="#custom" class="mode-card" aria-label="Start Custom Quiz" id="openCustom">
+          <div class="mode-card__icon">⚙️</div>
+          <div class="mode-card__tag">Flexible</div>
+          <h3>Custom Quiz</h3>
+          <p>Pick a topic, set the number of questions, and quiz at your own pace.</p>
+        </a>
+        <a href="flashcards.html" class="mode-card" aria-label="Open Flashcards">
+          <div class="mode-card__icon">🃏</div>
+          <div class="mode-card__tag">Review</div>
+          <h3>Flashcards</h3>
+          <p>Flip through key concepts with our interactive flashcard deck. Mark what you know.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Custom Quiz Config ──────────────────────────── -->
+  <section class="section" id="custom" style="padding-top:0">
+    <div class="container container--narrow">
+      <div class="quiz-config">
+        <h3>⚙️ Custom Quiz Settings</h3>
+        <div class="config-row">
+          <div class="config-field">
+            <label for="topicSelect">Topic / Unit</label>
+            <select id="topicSelect" class="quiz-select" aria-label="Select topic"></select>
+          </div>
+          <div class="config-field">
+            <label for="countInput">Questions: <strong id="countLabel">20</strong></label>
+            <input type="range" id="countInput" min="5" max="75" value="20" step="5"
+                   style="width:100%;accent-color:var(--navy);" aria-label="Number of questions">
+          </div>
+        </div>
+        <button id="startCustom" class="btn btn--primary btn--full">Start Custom Quiz →</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Topics Covered ─────────────────────────────── -->
+  <section class="section" style="background:var(--white); padding:2.5rem 0;">
+    <div class="container">
+      <div class="section__header">
+        <h2>Topics Covered</h2>
+        <p>All four CISI IOC units with exam-relevant question content</p>
+      </div>
+      <div class="topics-list">
+        <div class="topic-item">
+          <h4>Unit 1: Investment Environment</h4>
+          <p>FCA regulation, MiFID II, EMIR, AML/KYC, primary &amp; secondary markets</p>
+        </div>
+        <div class="topic-item">
+          <h4>Unit 2: Investment Products</h4>
+          <p>Equities, gilts, corporate bonds, derivatives, OEICs, unit trusts, ETFs, structured products</p>
+        </div>
+        <div class="topic-item">
+          <h4>Unit 3: Operational Workflow</h4>
+          <p>Trade lifecycle, T+2 settlement, CREST, Euroclear, clearing &amp; netting, corporate actions</p>
+        </div>
+        <div class="topic-item">
+          <h4>Unit 4: Supporting Functions</h4>
+          <p>Custody, fund administration, UCITS, NAV calculation, reconciliation, risk management</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Recent History ─────────────────────────────── -->
+  <section class="section">
+    <div class="container container--narrow">
+      <div class="flex justify-between items-center mb-2" style="flex-wrap:wrap;gap:0.75rem">
+        <h2 style="color:var(--navy)">Recent Activity</h2>
+        <a href="progress.html" class="btn btn--ghost btn--sm">View All Progress →</a>
+      </div>
+      <div class="card" style="padding:0.5rem 1.5rem">
+        <div id="recentHistory"></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- ── Footer ─────────────────────────────────────────── -->
+<footer class="footer">
+  <p>CISI IOC Practice Platform &mdash; For revision purposes only. Not affiliated with CISI.
+     <a href="https://www.cisi.org" target="_blank" rel="noopener">cisi.org</a>
+  </p>
+</footer>
+
+<script src="js/questions.js"></script>
+<script src="js/app.js"></script>
+<script>
+  // Custom quiz card click → scroll to config
+  document.getElementById('openCustom').addEventListener('click', e => {
+    e.preventDefault();
+    document.getElementById('custom').scrollIntoView({ behavior: 'smooth' });
+  });
+</script>
+</body>
+</html>

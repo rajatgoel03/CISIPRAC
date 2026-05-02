@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Results — CISI IOC Practice</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏆</text></svg>">
+</head>
+<body>
+
+<!-- ── Navigation ─────────────────────────────────────── -->
+<nav class="navbar" role="navigation" aria-label="Main navigation">
+  <div class="navbar__inner">
+    <a href="index.html" class="navbar__brand" aria-label="CISI IOC Home">
+      <div class="navbar__brand-icon" aria-hidden="true">IOC</div>
+      <span class="navbar__brand-text">CISI <span>IOC</span> Practice</span>
+    </a>
+    <ul class="navbar__nav" role="list">
+      <li><a href="index.html"      class="navbar__link">Home</a></li>
+      <li><a href="quiz.html?mode=quick" class="navbar__link">Practice</a></li>
+      <li><a href="flashcards.html" class="navbar__link">Flashcards</a></li>
+      <li><a href="progress.html"   class="navbar__link">Progress</a></li>
+    </ul>
+    <button class="navbar__hamburger" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- ── Results Hero ───────────────────────────────────── -->
+<header class="results-hero">
+  <div class="container" style="max-width:700px">
+
+    <div class="score-ring-wrapper">
+      <div class="score-ring" role="img" aria-label="Score ring">
+        <svg viewBox="0 0 120 120" width="160" height="160">
+          <circle class="score-ring__bg"   cx="60" cy="60" r="54"/>
+          <circle class="score-ring__fill" id="scoreRingFill" cx="60" cy="60" r="54"
+                  stroke-dasharray="339.292" stroke-dashoffset="339.292"/>
+        </svg>
+        <div class="score-ring__text">
+          <span class="score-ring__pct"  id="scorePct"  aria-live="polite">—</span>
+          <span class="score-ring__label" id="scoreLabel">Score</span>
+        </div>
+      </div>
+    </div>
+
+    <div id="passBadge" class="pass-badge" aria-live="polite">—</div>
+    <p style="color:rgba(255,255,255,0.7);margin-top:0.5rem;font-size:0.9rem">Pass mark is 70%</p>
+
+    <div class="results-stats">
+      <div class="results-stat">
+        <div class="results-stat-value" id="resultCorrect">—</div>
+        <div class="results-stat-label">Correct</div>
+      </div>
+      <div class="results-stat">
+        <div class="results-stat-value" id="resultMode">—</div>
+        <div class="results-stat-label">Mode</div>
+      </div>
+      <div class="results-stat">
+        <div class="results-stat-value" id="resultTime">—</div>
+        <div class="results-stat-label">Time Taken</div>
+      </div>
+    </div>
+
+    <!-- CTA Buttons -->
+    <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;margin-top:2rem">
+      <a href="#" id="retakeBtn" class="btn btn--primary">🔁 Retake Quiz</a>
+      <a href="index.html" class="btn btn--secondary">🏠 Back to Home</a>
+      <a href="progress.html" class="btn btn--secondary">📊 View Progress</a>
+    </div>
+  </div>
+</header>
+
+<!-- ── Main Results Body ───────────────────────────────── -->
+<main>
+  <section class="section">
+    <div class="container container--medium">
+
+      <!-- Topic Breakdown -->
+      <div class="card mb-3">
+        <h3 style="color:var(--navy);margin-bottom:1.5rem">📊 Topic Breakdown</h3>
+        <div id="topicBreakdown" class="topic-breakdown">
+          <!-- Rendered by JS -->
+        </div>
+      </div>
+
+      <!-- Question Review -->
+      <div>
+        <h3 style="color:var(--navy);margin-bottom:1rem">🔍 Question Review</h3>
+        <p style="font-size:0.88rem;margin-bottom:1.25rem">Click any question to see the explanation.</p>
+        <div id="questionReview">
+          <!-- Rendered by JS -->
+        </div>
+      </div>
+
+    </div>
+  </section>
+</main>
+
+<!-- ── Footer ─────────────────────────────────────────── -->
+<footer class="footer">
+  <p>CISI IOC Practice Platform &mdash; For revision purposes only.</p>
+</footer>
+
+<script src="js/questions.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

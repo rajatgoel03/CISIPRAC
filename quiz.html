@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz — CISI IOC Practice</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📝</text></svg>">
+</head>
+<body>
+
+<!-- ── Navigation ─────────────────────────────────────── -->
+<nav class="navbar" role="navigation" aria-label="Main navigation">
+  <div class="navbar__inner">
+    <a href="index.html" class="navbar__brand" aria-label="CISI IOC Home">
+      <div class="navbar__brand-icon" aria-hidden="true">IOC</div>
+      <span class="navbar__brand-text">CISI <span>IOC</span> Practice</span>
+    </a>
+    <ul class="navbar__nav" role="list">
+      <li><a href="index.html"      class="navbar__link">Home</a></li>
+      <li><a href="quiz.html?mode=quick" class="navbar__link active" aria-current="page">Practice</a></li>
+      <li><a href="flashcards.html" class="navbar__link">Flashcards</a></li>
+      <li><a href="progress.html"   class="navbar__link">Progress</a></li>
+    </ul>
+    <button class="navbar__hamburger" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- ── Quiz Top Bar ───────────────────────────────────── -->
+<div class="quiz-topbar" role="banner">
+  <div class="quiz-topbar__meta">
+    <span class="quiz-badge" id="modeLabel">Practice Quiz</span>
+    <span class="quiz-topbar__title" id="questionNum">Question 1 of 20</span>
+    <span style="font-size:0.82rem;color:var(--text-light)" id="answeredCount">0 answered</span>
+  </div>
+  <div class="timer" role="timer" aria-live="polite" aria-label="Timer">
+    <span class="timer__icon" aria-hidden="true">⏱</span>
+    <span id="timer">00:00</span>
+  </div>
+</div>
+
+<!-- ── Progress Bar ───────────────────────────────────── -->
+<div class="progress-bar-wrapper" style="border-radius:0;height:4px" aria-hidden="true">
+  <div class="progress-bar" id="progressBar" style="width:0%"></div>
+</div>
+
+<!-- ── Quiz Body ──────────────────────────────────────── -->
+<main class="quiz-body" id="quizBody">
+
+  <!-- Question Card -->
+  <div class="question-card" role="main">
+    <div class="question-card__unit" id="questionUnit" aria-label="Topic">Unit 1 · Regulation</div>
+    <p class="question-card__text" id="questionText" aria-live="polite">Loading question…</p>
+
+    <div class="options-list" id="optionsList" role="radiogroup" aria-label="Answer options">
+      <!-- Options injected by JS -->
+    </div>
+
+    <!-- Explanation (shown after answer in practice mode) -->
+    <div class="explanation-box" id="explanationBox" role="note" aria-live="polite">
+      <div class="explanation-box__label">Explanation</div>
+      <div class="explanation-box__text" id="explanationText"></div>
+    </div>
+  </div>
+
+  <!-- Navigation -->
+  <div class="quiz-nav" role="navigation" aria-label="Question navigation">
+    <div class="quiz-nav__left">
+      <button class="btn btn--ghost" id="prevBtn" aria-label="Previous question" disabled>← Prev</button>
+    </div>
+    <div class="quiz-nav__right">
+      <button class="btn btn--danger btn--sm" id="submitBtn" aria-label="Submit quiz">Submit Quiz</button>
+      <button class="btn btn--primary" id="nextBtn" aria-label="Next question">Next →</button>
+    </div>
+  </div>
+
+  <!-- Question dot grid -->
+  <hr class="divider">
+  <h4 style="color:var(--text-light);font-size:0.82rem;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.75rem">Question Map</h4>
+  <div class="question-grid" id="questionGrid" role="navigation" aria-label="Jump to question"></div>
+
+</main>
+
+<!-- ── Submit Modal ───────────────────────────────────── -->
+<div class="modal-overlay" id="submitModal" role="dialog" aria-modal="true" aria-labelledby="submitModalTitle">
+  <div class="modal">
+    <h3 id="submitModalTitle">Submit Quiz?</h3>
+    <p id="submitModalMsg">Are you sure you want to submit your answers?</p>
+    <div class="modal__btns">
+      <button class="btn btn--ghost" id="cancelSubmit">Continue Quiz</button>
+      <button class="btn btn--primary" id="confirmSubmit">Submit →</button>
+    </div>
+  </div>
+</div>
+
+<script src="js/questions.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
