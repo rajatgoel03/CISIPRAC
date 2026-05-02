@@ -1101,6 +1101,453 @@ const QUESTIONS = [
     ],
     correct: 1,
     explanation: "Duration (specifically modified duration) measures a bond's price sensitivity to a 1% change in interest rates. A modified duration of 5 years means the bond price will change by approximately 5% for a 1% change in yields. Longer-dated, lower-coupon bonds have higher duration and are more sensitive to rate changes."
+  },
+
+  // ============================================================
+  // OPERATIONAL RISK EXAM — APRIL 2026 (Real Exam Questions)
+  // ============================================================
+
+  {
+    id: 76,
+    unit: "OR Chapter 3",
+    chapter: 3,
+    topic: "Risk Appetite",
+    question: "What would typically be included in a risk appetite statement to address a risk which has been assessed as exceeding risk appetite limits?",
+    options: [
+      "A. A corrective action plan detailing steps to reduce the risk back within appetite",
+      "B. An instruction to ignore the risk until the next scheduled annual review",
+      "C. An increase in the risk limit to match the current elevated risk level",
+      "D. Removal of the risk from the risk register entirely"
+    ],
+    correct: 0,
+    previousExam: true,
+    examDate: "April 2026",
+    explanation: "When a risk exceeds the firm's risk appetite, the risk appetite statement should include a specific corrective action plan or remediation/escalation procedure outlining the steps required to bring the risk back within acceptable limits. This ensures accountability and a clear path to resolution. Simply ignoring the risk, raising the limit to match the breach, or removing it from the register would all undermine the purpose of having a risk appetite framework. (Chapter 3: The Nature of Operational Risk)"
+  },
+  {
+    id: 77,
+    unit: "OR Chapter 1",
+    chapter: 1,
+    topic: "Major Operational Risk Incidents",
+    question: "How did the realisation of operational risk cause the regulator to suspend GAM's Absolute Return Fund in 2018?",
+    options: [
+      "A. A whistleblower reported breaches of dealing, inducement and record-keeping policies, leading to the fund's suspension",
+      "B. A cyber attack on GAM's trading systems resulted in unauthorised fund transactions",
+      "C. Fraudulent client accounts were opened without proper know-your-customer checks",
+      "D. GAM's outsourced fund administrator failed to calculate the NAV correctly for several months"
+    ],
+    correct: 0,
+    previousExam: true,
+    examDate: "April 2026",
+    explanation: "In 2018, a whistleblower reported that GAM's star fund manager Tim Haywood had breached the firm's policies on dealing, inducements and record-keeping. The FCA and FINMA investigated, leading to Haywood's suspension and the subsequent suspension and winding down of the GAM Absolute Return Bond Fund. This is a key operational risk case study illustrating how people risk (misconduct) and process failure can cause significant harm. (Chapter 1: Risk Basics — Major Operational Risk Incidents)"
+  },
+  {
+    id: 78,
+    unit: "OR Chapter 3",
+    chapter: 3,
+    topic: "Risk Measurement Methods",
+    question: "Which of the following best describes historical loss data analysis?",
+    options: [
+      "A. A review of past operational loss events to identify patterns, trends and potential future exposures",
+      "B. A forward-looking scenario analysis based on hypothetical stress events",
+      "C. An assessment of market price movements to estimate future volatility",
+      "D. A review of counterparty credit default rates over a defined period"
+    ],
+    correct: 0,
+    previousExam: true,
+    examDate: "April 2026",
+    explanation: "Historical loss data analysis involves reviewing actual past operational loss events recorded by the firm (or sourced from external databases such as ORX) to identify patterns, recurring causes, trends and potential future exposures. It differs from scenario analysis, which is forward-looking and hypothetical. It is one of the key inputs into an operational risk capital model under the Basel framework. (Chapter 3: The Nature of Operational Risk — Risk Measurement Methods)"
+  },
+  {
+    id: 79,
+    unit: "OR Chapter 3",
+    chapter: 3,
+    topic: "Risk Reporting",
+    question: "Which of these is a purpose of internal reporting of risk events?",
+    options: [
+      "A. To enable management to identify trends, escalate issues and make informed decisions on risk mitigation",
+      "B. To satisfy only external regulatory reporting requirements imposed by the FCA",
+      "C. To record events solely for the purpose of making insurance claims",
+      "D. To assign formal blame to individual employees responsible for the event"
+    ],
+    correct: 0,
+    previousExam: true,
+    examDate: "April 2026",
+    explanation: "Internal reporting of risk events serves several important management purposes: it allows senior management to identify emerging trends, spot root causes, escalate material issues and make informed, evidence-based decisions on risk mitigation and resource allocation. It is not primarily about satisfying external regulators, filing insurance claims, or apportioning blame — a blame culture actually discourages staff from reporting events, which worsens the firm's risk management. (Chapter 3: The Nature of Operational Risk — Risk Reporting)"
+  },
+  {
+    id: 80,
+    unit: "OR Chapter 3",
+    chapter: 3,
+    topic: "Three Lines of Defence",
+    question: "A firm's internal audit function is important in terms of the operational risk management process because it:",
+    options: [
+      "A. Provides independent assurance on the effectiveness of risk management and internal controls",
+      "B. Manages day-to-day operational risks within business units",
+      "C. Sets the firm's risk appetite and overall risk strategy",
+      "D. Executes trades and client transactions on behalf of the firm"
+    ],
+    correct: 0,
+    previousExam: true,
+    examDate: "April 2026",
+    explanation: "Internal audit forms the third line of defence in the Three Lines of Defence model. It provides independent, objective assurance to the board and senior management on the overall effectiveness of risk management, controls and governance processes. The first line (business units) manages day-to-day risks; the second line (risk and compliance functions) sets the framework and monitors; and the third line (internal audit) independently assures that both previous lines are working effectively. (Chapter 3: The Nature of Operational Risk — Three Lines of Defence)"
+  },
+  {
+    id: 81,
+    unit: "OR Chapter 4",
+    chapter: 4,
+    topic: "Causes and Impacts",
+    question: "Inaccurate financial reporting can lead to poor decision-making and is classified as:",
+    options: [
+      "A. An operational risk event arising from process failure",
+      "B. A market risk event caused by adverse price movements",
+      "C. A liquidity risk event caused by inability to meet obligations",
+      "D. A credit risk event caused by counterparty default"
+    ],
+    correct: 0,
+    previousExam: true,
+    examDate: "April 2026",
+    explanation: "Inaccurate financial reporting is classified as an operational risk event, specifically arising from process failure (and potentially people failure). Under the Basel framework's seven loss event categories, this would fall under 'Execution, Delivery and Process Management'. It is not market, liquidity or credit risk — those relate to price movements, cash flow shortfalls and counterparty default respectively. Poor reporting can cascade into poor strategic and operational decisions, making it a significant operational risk concern. (Chapter 4: Causes and Impacts of Operational Risk Events)"
+  },
+  {
+    id: 82,
+    unit: "OR Chapter 2",
+    chapter: 2,
+    topic: "Market Risk / Liquidity",
+    question: "Market depth is defined as the:",
+    options: [
+      "A. Ability of a market to absorb large trade volumes without significantly affecting the price",
+      "B. Total market capitalisation of all listed securities in a given exchange",
+      "C. Number of active market participants registered with the regulator",
+      "D. Degree of volatility in asset prices over a defined historical period"
+    ],
+    correct: 0,
+    previousExam: true,
+    examDate: "April 2026",
+    explanation: "Market depth refers to the market's capacity to sustain relatively large market orders without a significant impact on the price of the security. A deep market has many buyers and sellers at various price levels, so large trades can be executed without moving the price substantially. Shallow markets (low depth) are associated with higher liquidity risk, as large trades can cause significant price slippage. (Chapter 2: Other Major Risks — Market and Liquidity Risk)"
+  },
+  {
+    id: 83,
+    unit: "OR Chapter 2",
+    chapter: 2,
+    topic: "Credit Risk Management",
+    question: "A common credit risk mitigation technique at the individual borrower level is:",
+    options: [
+      "A. Requiring collateral or security against the loan",
+      "B. Diversifying the investment portfolio across multiple asset classes",
+      "C. Increasing the firm's Value-at-Risk (VaR) limits",
+      "D. Applying macro-level stress testing to the entire loan book"
+    ],
+    correct: 0,
+    previousExam: true,
+    examDate: "April 2026",
+    explanation: "At the individual borrower level, requiring collateral (such as property, financial assets or a personal guarantee) is a standard credit risk mitigation technique. If the borrower defaults, the lender can seize and liquidate the collateral to recover the debt. Other techniques at the portfolio level include diversification and setting concentration limits, but these operate at a portfolio level rather than mitigating risk for a specific borrower. (Chapter 2: Other Major Risks — Credit Risk Management)"
+  },
+  {
+    id: 84,
+    unit: "OR Chapter 6",
+    chapter: 6,
+    topic: "Support and Control Functions",
+    question: "For a successful merger between two major financial institutions, which function implements the integration?",
+    options: [
+      "A. The operations function, as it manages the integration of systems, processes and people",
+      "B. The front office trading desk, as it drives revenue synergies post-merger",
+      "C. The compliance function alone, as regulatory approvals are the main obstacle",
+      "D. The external auditors, as they verify the combined entity's financial statements"
+    ],
+    correct: 0,
+    previousExam: true,
+    examDate: "April 2026",
+    explanation: "A successful merger between financial institutions depends heavily on the operations function to implement the integration. Operations manages the complex task of combining IT systems, back-office processes, data migration, client on-boarding, staff restructuring and workflow redesign. While the front office drives revenue and compliance handles regulatory approvals, it is operations that physically integrates the two firms' day-to-day running. Failure to manage this integration is a major source of operational risk in mergers. (Chapter 6: Support and Control Functions)"
+  },
+  {
+    id: 85,
+    unit: "OR Chapter 4",
+    chapter: 4,
+    topic: "Near Misses and Loss Event Recording",
+    question: "An error in a contract reads £1 million rather than £10 million but is corrected in time. What action is required?",
+    options: [
+      "A. The error should be recorded as a near miss in the operational risk loss event database even though no financial loss occurred",
+      "B. No action is needed as no financial loss was incurred and the error was corrected",
+      "C. The error must be reported immediately to the FCA as a material regulatory breach",
+      "D. A formal complaint must be raised against the counterparty for accepting an incorrect contract"
+    ],
+    correct: 0,
+    previousExam: true,
+    examDate: "April 2026",
+    explanation: "Even though no financial loss occurred, this contract error is a near miss and should be recorded in the operational risk loss event database. Near misses (also called 'no-harm' events or 'near hits') provide valuable information about weaknesses in processes and controls — they indicate what could go wrong and are an important early warning indicator. Capturing near misses helps firms identify and fix control weaknesses before they result in actual losses. Ignoring them defeats the purpose of loss event data collection. (Chapter 4: Causes and Impacts — Near Misses and Loss Event Recording)"
+  },
+  {
+    id: 86,
+    unit: "OR Chapter 2",
+    chapter: 2,
+    topic: "Market Risk Measurement",
+    question: "Which of the following is a disadvantage of value-at-risk (VaR)? It does not:",
+    options: [
+      "A. Capture the size of losses beyond the confidence level (tail risk and extreme events)",
+      "B. Use statistical or quantitative methods in its calculation",
+      "C. Apply to trading portfolios or investment positions",
+      "D. Consider historical price data in its estimation"
+    ],
+    correct: 0,
+    previousExam: true,
+    examDate: "April 2026",
+    explanation: "A key limitation of VaR is that it does not capture the magnitude of losses that occur beyond the confidence level — i.e., it says nothing about how bad losses can be in the tail of the distribution (extreme events). For example, a 99% VaR only tells you that losses exceeding the VaR figure occur less than 1% of the time, but not how large those losses might be. This is why Expected Shortfall (CVaR) was developed as a complementary measure. VaR does use statistical methods, can be applied to trading portfolios, and does use historical data. (Chapter 2: Other Major Risks — Market Risk Measurement)"
+  },
+  {
+    id: 87,
+    unit: "OR Chapter 3",
+    chapter: 3,
+    topic: "Risk Measurement Methods",
+    question: "A firm has completed a risk measurement exercise using the benchmarking method. What will the results mainly indicate?",
+    options: [
+      "A. How the firm's risk profile compares to industry peers or external data sources",
+      "B. The exact regulatory capital required under the Basel III framework",
+      "C. The precise probability of occurrence for each individual risk event",
+      "D. Whether the firm is in compliance with all applicable FCA conduct rules"
+    ],
+    correct: 0,
+    previousExam: true,
+    examDate: "April 2026",
+    explanation: "Benchmarking as a risk measurement method involves comparing a firm's risk profile, loss data, or risk metrics against those of industry peers, trade associations (such as ORX) or external databases. The results primarily indicate how the firm's risk exposure and loss experience compares relative to others — highlighting areas where the firm may be above or below the industry norm. It does not directly calculate regulatory capital, produce precise event probabilities, or determine FCA compliance. (Chapter 3: The Nature of Operational Risk — Risk Measurement Methods)"
+  },
+  {
+    id: 88,
+    unit: "OR Chapter 3",
+    chapter: 3,
+    topic: "Risk Assessment Tools",
+    question: "A method that prioritises risks following an assessment of their likelihood and impact is known as:",
+    options: [
+      "A. Risk heat mapping (risk matrix)",
+      "B. Scenario analysis",
+      "C. Key risk indicators (KRIs)",
+      "D. Loss distribution approach (LDA)"
+    ],
+    correct: 0,
+    previousExam: true,
+    examDate: "April 2026",
+    explanation: "A risk heat map (or risk matrix) is a visual tool that plots risks on a two-dimensional grid based on their assessed likelihood (probability of occurrence) and impact (severity of consequence). This allows risks to be prioritised — those with high likelihood and high impact appear in the 'red' zone requiring immediate attention, while lower-rated risks appear in 'amber' or 'green' zones. Scenario analysis examines specific hypothetical events; KRIs are forward-looking metrics; LDA is a statistical capital modelling technique. (Chapter 3: The Nature of Operational Risk — Risk Assessment Tools)"
+  },
+  {
+    id: 89,
+    unit: "OR Chapter 2",
+    chapter: 2,
+    topic: "Credit Ratings",
+    question: "During the financial crisis, credit rating agencies were criticised because they:",
+    options: [
+      "A. Assigned high (AAA) credit ratings to structured/securitised products that subsequently defaulted or were significantly downgraded",
+      "B. Refused to assign credit ratings to sovereign government bonds during the crisis",
+      "C. Charged excessive upfront fees directly to retail investors for rating access",
+      "D. Published credit rating updates too infrequently to be useful to the market"
+    ],
+    correct: 0,
+    previousExam: true,
+    examDate: "April 2026",
+    explanation: "A major criticism of credit rating agencies (Moody's, S&P, Fitch) during the 2007-2009 financial crisis was that they assigned AAA (the highest possible) credit ratings to complex structured products such as Collateralised Debt Obligations (CDOs) and mortgage-backed securities (MBS), many of which subsequently suffered dramatic defaults or downgrades. Critics argued the agencies had conflicts of interest (paid by the issuers they rated), used flawed models, and failed to account for the correlation of underlying mortgage defaults. (Chapter 2: Other Major Risks — Credit Ratings)"
+  },
+  {
+    id: 90,
+    unit: "OR Chapter 3",
+    chapter: 3,
+    topic: "Risk Treatment / Mitigation",
+    question: "A financial institution has introduced new automated systems to replace manual processes. This is an example of which method of risk treatment?",
+    options: [
+      "A. Risk reduction (treat) — using technology to reduce the likelihood of human error",
+      "B. Risk transfer — passing the risk to a third-party technology provider",
+      "C. Risk avoidance (terminate) — ceasing the activities that generate the risk",
+      "D. Risk acceptance (tolerate) — acknowledging the risk without taking further action"
+    ],
+    correct: 0,
+    previousExam: true,
+    examDate: "April 2026",
+    explanation: "Introducing automated systems to replace manual processes is an example of risk reduction (also called 'treat'). Automation reduces the likelihood of human error — a major source of operational risk — thereby lowering the firm's overall risk exposure. This is one of the four 'T's of risk treatment: Treat (reduce), Transfer (e.g., insurance), Terminate (avoid), and Tolerate (accept). The risk has not been transferred to a third party, avoided entirely, or simply accepted without action. (Chapter 3: The Nature of Operational Risk — The 4Ts of Risk Treatment)"
+  },
+  {
+    id: 91,
+    unit: "OR Chapter 3",
+    chapter: 3,
+    topic: "Risk Assessment vs Measurement",
+    question: "In operational risk, what key question do both risk assessment and risk measurement address?",
+    options: [
+      "A. What could go wrong and what is the potential impact or loss?",
+      "B. Who is personally responsible and liable for each loss event?",
+      "C. When did the most recent loss event occur within the firm?",
+      "D. How much regulatory capital is currently held against operational risk?"
+    ],
+    correct: 0,
+    previousExam: true,
+    examDate: "April 2026",
+    explanation: "Both risk assessment and risk measurement fundamentally seek to answer the question: what could go wrong, and what is the potential impact or loss? Risk assessment does this qualitatively (e.g., through RCSA, heat maps, scenario analysis), while risk measurement does it quantitatively (e.g., using loss data, VaR models, statistical distributions). The question of who is liable, when events occurred, or how much capital is held are separate, secondary considerations. (Chapter 3: The Nature of Operational Risk — Risk Assessment vs Measurement)"
+  },
+  {
+    id: 92,
+    unit: "OR Chapter 7",
+    chapter: 7,
+    topic: "Regulatory Environment / Conduct",
+    question: "When on-boarding a new client, how are firms expected to satisfy their regulatory obligations relating to product suitability?",
+    options: [
+      "A. By conducting a suitability assessment — gathering information on the client's knowledge, experience, financial situation and investment objectives",
+      "B. By providing the client with a standard product brochure covering all available products",
+      "C. By requiring the client to sign a disclaimer accepting all investment risk",
+      "D. By checking the client's credit rating and income level only"
+    ],
+    correct: 0,
+    previousExam: true,
+    examDate: "April 2026",
+    explanation: "Under MiFID II and the FCA's Conduct of Business Sourcebook (COBS), firms must conduct a suitability assessment before making personal recommendations or managing investments. This involves gathering sufficient information about the client's investment knowledge and experience, financial situation (including ability to bear losses) and investment objectives (including risk tolerance). Only after this assessment can the firm determine whether a product is suitable. A brochure, disclaimer or credit check alone does not fulfil suitability obligations. (Chapter 7: Operational Risk in the Regulatory Environment)"
+  },
+  {
+    id: 93,
+    unit: "OR Chapter 5",
+    chapter: 5,
+    topic: "Operational Risks in the Trade Cycle / Corporate Actions",
+    question: "If a firm fails to respond to a client's instruction for a corporate action, they could be exposed to:",
+    options: [
+      "A. Financial loss and/or reputational damage, as the client may miss a time-sensitive election",
+      "B. Increased credit risk from the counterparty involved in the corporate action",
+      "C. Reduced liquidity risk because fewer transactions are being processed",
+      "D. Lower market risk exposure as the position remains unchanged"
+    ],
+    correct: 0,
+    previousExam: true,
+    examDate: "April 2026",
+    explanation: "Corporate actions such as rights issues, tender offers and conversions are time-sensitive — missing the election deadline is irreversible. If a firm fails to act on a client's instruction, the client may miss out on valuable rights or be allocated a less favourable option by default. This exposes the firm to financial loss (it may need to compensate the client) and reputational damage (loss of client trust and potential complaints or regulatory scrutiny). It does not reduce any form of risk — it creates it. (Chapter 5: Operational Risks in the Trade Cycle — Corporate Actions)"
+  },
+  {
+    id: 94,
+    unit: "OR Chapter 1",
+    chapter: 1,
+    topic: "Definition of Operational Risk",
+    question: "The Bank for International Settlements' (BIS/Basel) definition of operational risk is:",
+    options: [
+      "A. The risk of loss resulting from inadequate or failed internal processes, people and systems, or from external events",
+      "B. The risk of loss from adverse movements in market prices, interest rates or exchange rates",
+      "C. The risk that a counterparty will default on its contractual obligations",
+      "D. The risk of insufficient liquid assets to meet financial obligations as they fall due"
+    ],
+    correct: 0,
+    previousExam: true,
+    examDate: "April 2026",
+    explanation: "The Basel Committee on Banking Supervision (BCBS), operating under the Bank for International Settlements (BIS), defines operational risk as 'the risk of loss resulting from inadequate or failed internal processes, people and systems or from external events.' This definition — which explicitly includes legal risk — is the standard industry and regulatory definition used in the CISI Operational Risk syllabus. The other options describe market risk, credit risk and liquidity risk respectively. (Chapter 1: Risk Basics — Definition of Operational Risk)"
+  },
+  {
+    id: 95,
+    unit: "OR Chapter 5",
+    chapter: 5,
+    topic: "Trade Cycle / Legal Risk",
+    question: "At what stage is the legal department primarily involved with eliminating operational risk in the trade lifecycle?",
+    options: [
+      "A. At the pre-settlement / contract stage — reviewing and ensuring contracts are legally sound before execution",
+      "B. During trade execution on the trading floor or electronic platform",
+      "C. After settlement has occurred and the trade is fully booked",
+      "D. Only during regulatory investigations or enforcement actions"
+    ],
+    correct: 0,
+    previousExam: true,
+    examDate: "April 2026",
+    explanation: "The legal department's primary involvement in reducing operational risk occurs at the pre-settlement/contract stage. Legal reviews the contractual documentation (ISDA master agreements, netting agreements, margin agreements, confirmations) to ensure they are legally enforceable, accurate and complete before the trade is executed or settled. Identifying and correcting legal ambiguities or errors at this stage prevents costly disputes, failed settlements and litigation risk arising later in the trade lifecycle. (Chapter 5: Operational Risks in the Trade Cycle — Legal Risk and the Trade Lifecycle)"
+  },
+  {
+    id: 96,
+    unit: "OR Chapter 3",
+    chapter: 3,
+    topic: "KRIs / Technology Risk / Risk Monitoring",
+    question: "A surge in demand following a TV advertising campaign crashes the firm's IT system. Which function should have alerted management to this risk?",
+    options: [
+      "A. The risk management function, through monitoring Key Risk Indicators such as system capacity utilisation",
+      "B. The marketing department, as they commissioned the advertising campaign",
+      "C. The external auditors, as they review IT controls in the annual audit",
+      "D. The front office sales desk, as they manage client demand directly"
+    ],
+    correct: 0,
+    previousExam: true,
+    examDate: "April 2026",
+    explanation: "The risk management function is responsible for monitoring Key Risk Indicators (KRIs) — forward-looking metrics that signal emerging risks before they crystallise into losses. A KRI such as 'percentage of system capacity utilised' or 'peak transaction volumes vs. system threshold' should have been tracked and escalated before the campaign went live. If IT capacity was near its limit, the risk function should have flagged this to management, who could then have arranged additional capacity or phased the campaign. (Chapter 3: The Nature of Operational Risk — KRIs and Risk Monitoring)"
+  },
+  {
+    id: 97,
+    unit: "OR Chapter 3",
+    chapter: 3,
+    topic: "People Risk / Change Risk",
+    question: "A large firm initiated three special projects: SP1 (addressing resource levels), SP2 (reviewing staff remuneration), SP3 (improving management communication). Which could have had an impact on operational risk?",
+    options: [
+      "A. All three — SP1, SP2 and SP3 all represent factors that can drive operational risk",
+      "B. SP1 only, as inadequate resource levels are the only direct cause of operational failures",
+      "C. SP2 and SP3 only, as remuneration and communication are the primary people risk drivers",
+      "D. None of them, as special projects are strategic decisions unrelated to operational risk"
+    ],
+    correct: 0,
+    previousExam: true,
+    examDate: "April 2026",
+    explanation: "All three projects relate to operational risk drivers: SP1 (resource levels) — inadequate staffing leads to errors, missed controls and key-person dependency risk; SP2 (staff remuneration) — poor or unfair pay structures can incentivise misconduct/fraud, increase staff turnover, and result in loss of skilled personnel; SP3 (management communication) — poor communication leads to misunderstanding of responsibilities, execution errors and failure to escalate issues appropriately. People risk is one of the four main sources of operational risk (people, processes, systems, external events). (Chapter 3: The Nature of Operational Risk — People Risk and Change Risk)"
+  },
+  {
+    id: 98,
+    unit: "OR Chapter 7",
+    chapter: 7,
+    topic: "Basel II Regulatory Capital",
+    question: "Under the Pillar 1 requirements of Basel II, the minimum overall capital ratio is:",
+    options: [
+      "A. 8% of risk-weighted assets",
+      "B. 4% of total (unweighted) assets",
+      "C. 10% of risk-weighted assets",
+      "D. 6% of gross income"
+    ],
+    correct: 0,
+    previousExam: true,
+    examDate: "April 2026",
+    explanation: "Under Basel II Pillar 1 (Minimum Capital Requirements), banks must hold a minimum total capital ratio of 8% of risk-weighted assets. This 8% comprises Tier 1 capital (at least 4%) and Tier 2 capital (up to 4%). The capital requirement covers credit risk, market risk and — crucially — operational risk (introduced by Basel II). Pillar 2 addresses the supervisory review process and Pillar 3 covers market discipline through disclosure requirements. (Chapter 7: Operational Risk in the Regulatory Environment — Basel II Pillar 1)"
+  },
+  {
+    id: 99,
+    unit: "OR Chapter 6",
+    chapter: 6,
+    topic: "Support and Control Functions / Middle Office",
+    question: "Janice works in the middle office of an investment firm active in the bonds market. A typical responsibility that reduces operational risk is:",
+    options: [
+      "A. Reconciling trade confirmations and positions between the front office and back office to identify and resolve discrepancies",
+      "B. Executing bond trades on behalf of clients on electronic trading platforms",
+      "C. Setting credit limits and counterparty exposure thresholds for the firm",
+      "D. Marketing new bond products and structured notes to institutional clients"
+    ],
+    correct: 0,
+    previousExam: true,
+    examDate: "April 2026",
+    explanation: "A core middle office function that reduces operational risk is reconciliation — comparing and matching trade confirmations, positions and valuations between the front office (traders) and back office (settlement/operations). Discrepancies (breaks) are identified and investigated promptly, preventing errors from propagating into settlement failures, incorrect P&L, or regulatory misreporting. The front office executes trades; risk or credit officers set limits; and marketing/sales roles handle client relationships — these are not typical middle office responsibilities. (Chapter 6: Support and Control Functions — Middle Office)"
+  },
+  {
+    id: 100,
+    unit: "OR Chapter 5",
+    chapter: 5,
+    topic: "Trade Cycle / Pre-Settlement",
+    question: "A component of the pre-settlement phase of the trade cycle is trade:",
+    options: [
+      "A. Confirmation — verifying the details of a trade between counterparties before settlement",
+      "B. Execution — the act of buying or selling a security in the market",
+      "C. Clearing — the calculation of net obligations and preparation for settlement",
+      "D. Regulatory reporting — submitting trade data to the regulator"
+    ],
+    correct: 0,
+    previousExam: true,
+    examDate: "April 2026",
+    explanation: "Trade confirmation is a key component of the pre-settlement phase. After a trade is executed, both counterparties exchange and verify the trade details (security, quantity, price, settlement date, counterparty identifiers) to confirm they agree on the terms before settlement takes place. If discrepancies are found, they must be resolved before the settlement date to avoid failed trades. Execution occurs before pre-settlement; clearing and settlement are subsequent phases; and regulatory reporting is a parallel obligation. (Chapter 5: Operational Risks in the Trade Cycle — Pre-Settlement Phase)"
+  },
+  {
+    id: 101,
+    unit: "OR Chapter 3",
+    chapter: 3,
+    topic: "Risk Assessment Methods",
+    question: "Which method of risk assessment uses business professionals' experience to capture possible combinations of events that have occurred in the past or may result in loss in the future?",
+    options: [
+      "A. Scenario analysis — uses expert judgement to construct plausible, severe scenarios based on experience and historical events",
+      "B. Key risk indicators (KRIs) — forward-looking quantitative metrics that signal emerging risks",
+      "C. Loss data analysis — a review of historical loss event records to identify past patterns",
+      "D. Benchmarking — comparing the firm's risk profile against industry peers and external data"
+    ],
+    correct: 0,
+    previousExam: true,
+    examDate: "April 2026",
+    explanation: "Scenario analysis relies on the experience and judgement of business professionals and risk experts to construct plausible but severe combinations of events — both those that have occurred historically and those that could happen in the future. It is particularly useful for capturing low-frequency, high-severity tail risks that may not appear in historical loss data. Workshops bring together subject matter experts to identify and quantify potential scenarios. KRIs are forward-looking metrics; loss data analysis is backward-looking; and benchmarking compares against peers. (Chapter 3: The Nature of Operational Risk — Scenario Analysis)"
   }
 ];
 
