@@ -1,4 +1,4 @@
-const cisiQuizData = [
+const QUESTIONS = [
   {
     id: 1,
     type: "multiple-choice",
@@ -1680,5 +1680,3 @@ const cisiQuizData = [
     explanation: "The FCA/PRA operational resilience framework (SS1/21, PS6/21) requires all regulated firms (banks, insurers, FCA solo-regulated firms) to identify their Important Business Services, set impact tolerances, and demonstrate through testing that they can continue to provide those services within tolerances during severe but plausible disruptions — regardless of the cause (cyber, people, systems, external events)."
   }
 ];
-
-export default cisiQuizData;
