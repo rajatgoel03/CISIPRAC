@@ -29,6 +29,9 @@ jobs:
       - name: Run converter
         run: python3 convert_questions.py
 
+      - name: Validate generated JavaScript
+        run: node --check js/questions.js
+
       - name: Commit updated questions.js
         run: |
           git config user.name  "github-actions[bot]"
