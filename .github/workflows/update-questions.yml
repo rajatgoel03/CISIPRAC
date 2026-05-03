@@ -1,0 +1,42 @@
+name: Update Questions from Excel
+
+on:
+  push:
+    paths:
+      - "questions.xlsx"
+  workflow_dispatch:  # Allow manual trigger from GitHub UI
+
+permissions:
+  contents: write
+
+jobs:
+  convert:
+    name: Convert Excel → questions.js
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install openpyxl
+
+      - name: Run converter
+        run: python3 convert_questions.py
+
+      - name: Commit updated questions.js
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add js/questions.js
+          if git diff --staged --quiet; then
+            echo "No changes to questions.js — nothing to commit."
+          else
+            git commit -m "chore: regenerate questions.js from questions.xlsx [skip ci]"
+            git push
+          fi
